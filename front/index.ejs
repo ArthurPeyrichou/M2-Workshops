@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <% include ./includes/head %>
+	</head>
+	<body class="container">
+
+		<div class="jumbotron">
+		    <h1>Workshops</h1>
+		    <p>here is the list of workshop</p>
+
+		    <ul class="list-unstyled"></ul>
+			<% workshops.forEach(function(workshop) { %>
+			    <li class="media my-4">
+			        <div id="workshop-<%= workshop.id %>" class="media-body workshop-container">
+			            <h5 class="mt-0 mb-1"><%= workshop.name %></h5>
+			            <p><%= workshop.description %></p>
+			            <a type="button" href="/update-workshop?id=<%= workshop.id %>" class="btn btn-warning btn-lg">Update current workshop</a>
+			            <a type="button" href="/remove-workshop?id=<%= workshop.id %>" class="btn btn-fail btn-lg">Remove current workshop</a>
+			        </div>        
+			    </li>
+			<% }); %>
+			</ul>
+		</div>
+
+		<a type="button" href="/workshop" class="btn btn-success btn-lg">Create new workshop</a>
+
+		<footer>
+		    <% include ./includes/footer %>
+		</footer>
+
+	</body>
+</html>

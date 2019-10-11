@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ./includes/head %>
+    </head>
+    <body class="container">
+
+        <div class="jumbotron">
+            <h1>Update Workshop</h1>
+            <form action="/update-workshop" method="POST">
+                <p>Change workshop's name and description, then validate it<p>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" value="<%= workshop.name %>" placeholder="Workshop Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" class="form-control" id="description" name="description" value="<%= workshop.description %>" placeholder="Give a description for your workshop" required>
+                </div>
+                <input type="text" id="id" name="id" value="<%= workshop.id %>" hidden>
+                <button type="submit" class="btn btn-primary">Change it</button>
+                <a type="button" class="btn btn-secondary" href="/">Cancel</a>
+            </form>
+        </div>
+
+        <footer>
+            <% include ./includes/footer %>
+        </footer>
+
+    </body>
+</html>

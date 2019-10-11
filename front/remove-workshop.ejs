@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ./includes/head %>
+    </head>
+    <body class="container">
+
+        <div class="jumbotron">
+            <h1>Remove Workshop</h1>
+            <form action="/remove-workshop" method="POST">
+                <p>Are you sure to want to delete this workshop?<p>
+
+                <div id="workshop-<%= workshop.id %>" class="media-body workshop-container">
+                    <h5 class="mt-0 mb-1"><%= workshop.name %></h5>
+                    <p><%= workshop.description %></p>
+                </div> 
+
+                <input type="text" id="id" name="id" value="<%= workshop.id %>" hidden>
+                <button type="submit" class="btn btn-primary">Yes, delete it</button>
+                <a type="button" class="btn btn-secondary" href="/">Cancel</a>
+            </form>
+        </div> 
+
+        <footer>
+            <% include ./includes/footer %>
+        </footer>
+
+    </body>
+</html>

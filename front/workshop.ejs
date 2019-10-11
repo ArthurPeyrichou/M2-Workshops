@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ./includes/head %>
+    </head>
+    <body class="container">
+
+        <div class="jumbotron">
+            <h1>Add Workshop</h1>
+            <form action="/workshop" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name"  placeholder="Workshop Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" class="form-control" id="description" name="description" placeholder="Give a description for your workshop" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+                <a type="button" class="btn btn-secondary" href="/">Cancel</a>
+            </form>
+        </div>
+
+        <footer>
+            <% include ./includes/footer %>
+        </footer>
+
+    </body>
+</html>

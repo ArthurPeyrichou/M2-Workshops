@@ -1,0 +1,12 @@
+.workshop-container:hover {
+	border: solid;
+    border-width: thin;
+    transition: 0.3s;
+}
+
+.workshop-container {
+	padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
